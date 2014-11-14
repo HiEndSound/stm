@@ -4,27 +4,27 @@ TARGET  = template
 
 # Используемые модули библиотеки периферии
 #-------------------------------------------------------------------------------
-# PERIPHDRIVERS += stm32f10x_adc
-# PERIPHDRIVERS += stm32f10x_bkp
-# PERIPHDRIVERS += stm32f10x_can
-# PERIPHDRIVERS += stm32f10x_cec
-# PERIPHDRIVERS += stm32f10x_crc
-# PERIPHDRIVERS += stm32f10x_dbgmcu
-# PERIPHDRIVERS += stm32f10x_exti
-# PERIPHDRIVERS += stm32f10x_flash
-# PERIPHDRIVERS += stm32f10x_fsmc
+PERIPHDRIVERS += stm32f10x_adc
+PERIPHDRIVERS += stm32f10x_bkp
+PERIPHDRIVERS += stm32f10x_can
+PERIPHDRIVERS += stm32f10x_cec
+PERIPHDRIVERS += stm32f10x_crc
+PERIPHDRIVERS += stm32f10x_dbgmcu
+PERIPHDRIVERS += stm32f10x_exti
+PERIPHDRIVERS += stm32f10x_flash
+PERIPHDRIVERS += stm32f10x_fsmc
 PERIPHDRIVERS += stm32f10x_gpio
-# PERIPHDRIVERS += stm32f10x_i2c
-# PERIPHDRIVERS += stm32f10x_iwdg
-# PERIPHDRIVERS += stm32f10x_pwr
+PERIPHDRIVERS += stm32f10x_i2c
+PERIPHDRIVERS += stm32f10x_iwdg
+PERIPHDRIVERS += stm32f10x_pwr
 PERIPHDRIVERS += stm32f10x_rcc
-# PERIPHDRIVERS += stm32f10x_rtc
-# PERIPHDRIVERS += stm32f10x_sdio
-# PERIPHDRIVERS += stm32f10x_spi
-# PERIPHDRIVERS += stm32f10x_tim
-# PERIPHDRIVERS += stm32f10x_usart
-# PERIPHDRIVERS += stm32f10x_wwdg
-# PERIPHDRIVERS += misc.c
+PERIPHDRIVERS += stm32f10x_rtc
+PERIPHDRIVERS += stm32f10x_sdio
+PERIPHDRIVERS += stm32f10x_spi
+PERIPHDRIVERS += stm32f10x_tim
+PERIPHDRIVERS += stm32f10x_usart
+PERIPHDRIVERS += stm32f10x_wwdg
+PERIPHDRIVERS += misc.c
 
 # Дефайны
 #-------------------------------------------------------------------------------
@@ -72,11 +72,16 @@ LIBS    +=
 
 # Настройки компилятора
 #-------------------------------------------------------------------------------
-CFLAGS += -mthumb -mcpu=cortex-m3 # архитектура и система комманд
-CFLAGS += -std=gnu99              # стандарт языка С
-CFLAGS += -Wall -pedantic         # Выводить все предупреждения
-CFLAGS += -Os                     # Оптимизация
-CFLAGS += -ggdb                   # Генерировать отладочную информацию для gdb
+CFLAGS += -mthumb -mcpu=cortex-m3 
+# архитектура и система комманд
+CFLAGS += -std=gnu99              
+# стандарт языка С
+CFLAGS += -Wall -pedantic         
+# Выводить все предупреждения
+CFLAGS += -Os                     
+# Оптимизация
+CFLAGS += -ggdb                   
+# Генерировать отладочную информацию для gdb
 CFLAGS += -fno-builtin
 
 CFLAGS += $(addprefix -I, $(INCLUDES))
